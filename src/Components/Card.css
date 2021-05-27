@@ -46,9 +46,9 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
 .ccvexpiery { width: 100%; display: flex; }
 .ccvexpiery .inputbx { justify-content: space-between;
     display: inline-table; }
-.payicon { width: 25px;
-    
-}
+.payicon { width: 12px;
+    display: inline-flex;
+    margin: 0 3px 0 0; }
 
 
 
