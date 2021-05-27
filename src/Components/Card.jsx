@@ -15,7 +15,7 @@ function Card(){
                             <label>Card Holders Name</label>
                             <input type="text" name="name" placeholder="Name On Card" />
                         </div>
-                        <div className="inputbx">
+                        <div className="inputbx inputbxcard">
                             <label>Card Number</label>
                             <input type="text" name="name" placeholder="---- ---- ---- ----" />
                         </div>

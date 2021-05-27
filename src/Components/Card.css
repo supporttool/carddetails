@@ -29,6 +29,7 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
     color: #979797;
     font-size: 14px; }
 .inputbx input { width: 100%; padding: 10px;border: 2px solid #ccc; }
+.inputbx input::placeholder { color: #ccc; }
 .inputbx input:focus-visible {
     outline: auto 1px #62d19e;;
 }
@@ -43,8 +44,10 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
     font-weight: 600;
     font-size: 17px;
 }
-.ccvexpiery { width: 100%; display: flex; }
-.ccvexpiery .inputbx { justify-content: space-between;
+.ccvexpiery { width: 100%; display: flex; justify-content: space-around; }
+.ccvexpiery .inputbx { justify-content: space-between; 
+    /* flex: 1; */
+     width: 48%;
     display: inline-table; }
 .payicon { width: 12px;
     display: inline-flex;
@@ -52,7 +55,9 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
 .payicon img {
     width: 100%;
 }
-
+.inputbxcard input { background: url(./images/cardicon.png); background-size: 20px;
+    background-position: 98% 10px;
+    background-repeat: no-repeat; }
 
 
 
