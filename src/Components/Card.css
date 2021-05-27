@@ -19,7 +19,7 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
     font-size: 20px;
     margin: 0 0 40px;
 }
-.inputbx { width: 100%; margin: 0 0 15px; }
+.inputbx { width: 100%; margin: 4px 0 15px; }
 .inputbx label {     
     width: 100%;
     margin: 0 0 5px;
@@ -42,8 +42,15 @@ main { width: 100%; background: #a08bda;display: flex;min-height: 100vh; }
     text-align: center;
     padding: 13px 0px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 17px;margin: 5px 0 0;
 }
+
+.inputbx button:hover {
+    background: #348d64; cursor: pointer;
+}
+
+
+
 .ccvexpiery { width: 100%; display: flex; justify-content: space-around; }
 .ccvexpiery .inputbx { justify-content: space-between; 
     /* flex: 1; */
