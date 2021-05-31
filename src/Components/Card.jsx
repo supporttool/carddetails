@@ -9,7 +9,7 @@ function Card(){
     const [cardMonth, setMonth] = useState(null);
     const [cardYear, setYear] = useState(null);
     function paynow(){
-        let data = {cardholdername,cardnumber,cardCCV,cardMonth,cardYear}
+        let data = {cardholdername,cardnumber,cardCCV,cardMonth,cardYear}   
         console.warn(data)
         // fetch("https://run.mocky.io/v3/0b14a8da-5fc7-4443-8511-53d687399bc9",
         // {
