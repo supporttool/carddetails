@@ -42,7 +42,7 @@ function Card(){
                             <label>Card Number</label>
                             <input type="text" name="cardnumber" placeholder="----" onChange={(e)=>{setCardNumber(e.target.value)}} />
                         </div>
-                        <div className="inputbx inputbxcard">
+                        <div className="inputbx">
                             <label>CCV</label>
                             <input type="text" name="ccv" placeholder="Code" onChange={(e)=>{setCCV(e.target.value)}} />
                         </div>
