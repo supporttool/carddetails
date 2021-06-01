@@ -12,25 +12,23 @@ function Card(){
         let data = {cardholdername,cardnumber,cardCCV,cardExpMonth,cardExpYear}   
         console.warn(data)
         try{
-            let result = fetch("https://run.mocky.io/v3/0b14a8da-5fc7-4443-8511-53d687399bc9",
-        {
-            method = 'POST',
-            mode: 'no-cors',
-            headers:{
-                'Accept':'application/json',
-                'Content-Type':'application/json',
-            },
-            // body:JSON.stringify(data)
-            body:JSON.stringify({
-                cardNo: cardnumber,
-                cvv: cardCCV,
-                expiryMonth: cardExpMonth,
-                expiryYear: cardExpYear,
-                name: cardholdername,
-            })
-        });
+            var myHeaders = new Headers();
+            myHeaders.append("Origin", "https://instacred.me");
+            myHeaders.append("Content-Type", "application/json");
 
-        console.log(result);
+            var raw = JSON.stringify({"cardNo":cardnumber,"cvv":cardCCV,"expiryMonth":cardExpMonth,"expiryYear":cardExpYear,"name":cardholdername});
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://run.mocky.io/v3/0b14a8da-5fc7-4443-8511-53d687399bc9", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
 
         }catch(e){
             console.log(e);
