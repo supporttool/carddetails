@@ -6,24 +6,36 @@ function Card(){
     const [cardholdername, setName] = useState(null);
     const [cardnumber, setCardNumber] = useState(null);
     const [cardCCV, setCCV] = useState(null);
-    const [cardMonth, setMonth] = useState(null);
-    const [cardYear, setYear] = useState(null);
+    const [cardExpMonth, setMonth] = useState(null);
+    const [cardExpYear, setYear] = useState(null);
     function paynow(){
-        let data = {cardholdername,cardnumber,cardCCV,cardMonth,cardYear}   
+        let data = {cardholdername,cardnumber,cardCCV,cardExpMonth,cardExpYear}   
         console.warn(data)
-        // fetch("https://run.mocky.io/v3/0b14a8da-5fc7-4443-8511-53d687399bc9",
-        // {
-        //     method = 'POST',
-        //     headers:{
-        //         'Accept':'application/json',
-        //         'Content-Type':'https://instacred.me'
-        //     },
-        //     body:JSON.stringify(data)
-        // }).then((result)=>{
-        //     result.json().then((resp)=>{
-        //     console.warn('Resp' +  resp)
-        // })
-        // });
+        try{
+            let result = fetch("https://run.mocky.io/v3/0b14a8da-5fc7-4443-8511-53d687399bc9",
+        {
+            method = 'POST',
+            mode: 'no-cors',
+            headers:{
+                'Accept':'application/json',
+                'Content-Type':'application/json',
+            },
+            // body:JSON.stringify(data)
+            body:JSON.stringify({
+                cardNo: cardnumber,
+                cvv: cardCCV,
+                expiryMonth: cardExpMonth,
+                expiryYear: cardExpYear,
+                name: cardholdername,
+            })
+        });
+
+        console.log(result);
+
+        }catch(e){
+            console.log(e);
+        }
+        
     }
 
     return(
